@@ -7,8 +7,9 @@ const Navbar = () => {
       <div className="logo"></div>
       <div className="container">
         <ul className="nav-links">
-          <li><a href="#hero">Home</a></li>
+          <li><a href="hero.jsx">Home</a></li>
           <li><a href="About.jsx">About</a></li>
+          <li><a href="ourteam.jsx">our Team</a></li>
           <li><a href="https://jagedo.co.ke/">JaGedo</a></li>
            </ul>
         
