@@ -1,11 +1,11 @@
-.flip-card {
+.profile-card {
     background-color: transparent;
     width: 200px;
     height: 300px;
     perspective: 1000px;
   }
   
-  .flip-card-inner {
+  .profile-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -14,12 +14,12 @@
     transition: transform 0.6s;
   }
   
-  .flip-card:hover .flip-card-inner {
+  .profile-card:hover .profile-card-inner {
     transform: rotateY(180deg);
   }
   
-  .flip-card-front,
-  .flip-card-back {
+  .profile-card-front,
+  .profile-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -28,13 +28,13 @@
     overflow: hidden;
   }
   
-  .flip-card-front img {
+  .profile-card-front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .flip-card-back {
+  .profile-card-back {
     background-color: #333;
     color: white;
     display: flex;

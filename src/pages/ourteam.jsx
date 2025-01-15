@@ -1,14 +1,14 @@
 import React from "react";
 import "./../styles/ourteam.css";
 
-const ourteam = ({ person }) => {
+const FlipCard = ({ person }) => {
   return (
-    <div className="flip-card">
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
+    <div className="profile-card">
+      <div className="profile-card-inner">
+        <div className="profile-card-front">
           <img src={person.image} alt={`${person.name}`} />
         </div>
-        <div className="flip-card-back">
+        <div className="profile-card-back">
           <h3>{person.name}</h3>
           <p>{person.title}</p>
         </div>
@@ -17,7 +17,7 @@ const ourteam = ({ person }) => {
   );
 };
 
-const FlipCardContainer = () => {
+const profileCardContainer = () => {
   const people = [
     {
       name: "John Doe",
@@ -45,4 +45,4 @@ const FlipCardContainer = () => {
   );
 };
 
-export default ourteam ;
+export default profileCardContainer;

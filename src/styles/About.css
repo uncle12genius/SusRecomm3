@@ -1,17 +1,17 @@
 .flip-card-container {
     display: flex;
-    justify-content: space-evenly; /* Adds even spacing between the cards */
+    justify-content: space-evenly; 
     align-items: center;
     margin: 50px;
     padding: 20px;
-    gap: 50px; /* Ensures extra space between cards */
+    gap: 50px; 
   }
   
   .flip-card {
     background-color: transparent;
     width: 200px;
     height: 250px;
-    perspective: 1000px; /* Add perspective for 3D effect */
+    perspective: 1000px; 
   }
   
   .flip-card-inner {
@@ -47,7 +47,7 @@
   }
   
   .flip-card-back {
-    background-color: #0047ab; /* Slightly lighter blue */
+    background-color: #0047ab; 
     transform: rotateY(180deg);
   }
   
