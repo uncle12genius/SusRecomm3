@@ -10,7 +10,7 @@ const Navbar = () => {
           <li><a href="hero.jsx">Home</a></li>
           <li><a href="About.jsx">About</a></li>
           <li><a href="ourteam.jsx">our Team</a></li>
-          <li><a href="https://jagedo.co.ke/">JaGedo</a></li>
+          <li><a href="https://jagedo.co.ke/" target="_blank" rel="noopener noreferrer">JaGedo</a></li>
            </ul>
         
       </div>

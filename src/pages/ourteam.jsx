@@ -17,7 +17,7 @@ const FlipCard = ({ person }) => {
   );
 };
 
-const profileCardContainer = () => {
+const OurTeam = () => {
   const people = [
     {
       name: "John Doe",
@@ -43,6 +43,6 @@ const profileCardContainer = () => {
       ))}
     </div>
   );
-}
+};
 
-export default profileCardContainer;
+export default OurTeam;

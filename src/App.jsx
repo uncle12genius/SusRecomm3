@@ -1,9 +1,9 @@
-import React from 'react';
-import Navbar from './components/Navbar.jsx';
-import Hero from './pages/Hero.jsx';
-import About from './pages/About.jsx';
-import ourteam from './pages/ourteam.jsx';
-import Footer from './components/footer.jsx';
+import React from "react";
+import Navbar from "./components/Navbar.jsx";
+import Hero from "./pages/Hero.jsx";
+import About from "./pages/About.jsx";
+import OurTeam from "./pages/OurTeam.jsx";
+import Footer from "./components/footer.jsx";
 
 const App = () => {
   return (
@@ -11,10 +11,11 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
-      <ourteam />
+      <OurTeam />
       <Footer />
     </div>
   );
 };
 
 export default App;
+
