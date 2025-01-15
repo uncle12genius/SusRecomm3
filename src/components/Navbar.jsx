@@ -8,7 +8,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#about">JaGedo</a></li>
+          <li><a href="https://jagedo.co.ke/">JaGedo</a></li>
            </ul>
         
       </div>
