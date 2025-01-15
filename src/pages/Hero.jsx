@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./../styles/Hero.css";
 
 const Hero = () => {
+  const images = [
+    "image1.jpeg", 
+    "image2.jpg", 
+    "image3.jpg", 
+    "image4.jpeg", 
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); 
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
-    <section id="hero" className="hero">
-      <div className="hero-content">
-      
-      </div>
-    </section>
+    <div
+      className="sustain-container"
+      style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+    >
+      <h1 className="sustain-text">SUSTAIN YOUR FUTURE</h1>
+    </div>
   );
 };
 
