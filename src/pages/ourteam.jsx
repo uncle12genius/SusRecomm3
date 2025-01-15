@@ -43,6 +43,6 @@ const profileCardContainer = () => {
       ))}
     </div>
   );
-};
+}
 
 export default profileCardContainer;
