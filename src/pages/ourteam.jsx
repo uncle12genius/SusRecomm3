@@ -20,27 +20,29 @@ const FlipCard = ({ person }) => {
 const OurTeam = () => {
   const people = [
     {
-      name: "John Doe",
-      title: "Software Engineer",
+      name: "James Ayako",
+      title: "Co-founder & CEO ",
       image: "https://via.placeholder.com/200x300",
     },
     {
-      name: "Jane Smith",
-      title: "Product Manager",
+      name: "Charles Nyamwaro",
+      title: "Chief Business Development office ",
       image: "https://via.placeholder.com/200x300",
     },
     {
-      name: "Sam Wilson",
-      title: "UI/UX Designer",
+      name: "Florence Njoki ",
+      title: "Chief Operation Office ",
       image: "https://via.placeholder.com/200x300",
     },
   ];
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-      {people.map((person, index) => (
-        <FlipCard key={index} person={person} />
-      ))}
+    <div id="our-team" className="our-team-section">
+      <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+        {people.map((person, index) => (
+          <FlipCard key={index} person={person} />
+        ))}
+      </div>
     </div>
   );
 };

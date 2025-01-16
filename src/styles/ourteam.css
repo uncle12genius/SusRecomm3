@@ -1,48 +1,57 @@
+.our-team-section {
+  height: 100vh; 
+  overflow-y: auto; 
+  padding: 20px;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .profile-card {
-    background-color: transparent;
-    width: 200px;
-    height: 300px;
-    perspective: 1000px;
-  }
-  
-  .profile-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-  }
-  
-  .profile-card:hover .profile-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .profile-card-front,
-  .profile-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .profile-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .profile-card-back {
-    background-color: #333;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg);
-    padding: 20px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px; 
+}
+
+.profile-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.profile-card:hover .profile-card-inner {
+  transform: rotateY(180deg);
+}
+
+.profile-card-front,
+.profile-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.profile-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.profile-card-back {
+  background-color: #000072; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); 
+}
