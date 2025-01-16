@@ -22,17 +22,17 @@ const OurTeam = () => {
     {
       name: "James Ayako",
       title: "Co-founder & CEO ",
-      image: "https://via.placeholder.com/200x300",
+      image: "jim.png",
     },
     {
       name: "Charles Nyamwaro",
       title: "Chief Business Development office ",
-      image: "https://via.placeholder.com/200x300",
+      image: "chuck.png ",
     },
     {
       name: "Florence Njoki ",
       title: "Chief Operation Office ",
-      image: "https://via.placeholder.com/200x300",
+      image: "evan.png ",
     },
   ];
 
