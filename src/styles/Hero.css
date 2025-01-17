@@ -45,3 +45,8 @@
 .hero-button:hover {
   background-color: #3333ff;
 }
+
+/* Hide image until it's fully loaded */
+.hidden-background-image {
+  display: none;
+}

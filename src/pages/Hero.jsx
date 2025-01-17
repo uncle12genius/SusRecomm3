@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";  // Import motion from framer-motion
+import { motion } from "framer-motion";
 import "./../styles/Hero.css";
 
 const Hero = () => {
@@ -11,17 +11,23 @@ const Hero = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setImageLoaded(false);
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change background every 5 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [images.length]);
 
+  const handleImageLoad = () => {
+    setImageLoaded(true); 
+  };
+
   const handleScroll = () => {
-    document.getElementById("next-section").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -29,11 +35,11 @@ const Hero = () => {
       className="hero-container"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 2 }} // Smooth fade-in effect
+      animate={{ opacity: imageLoaded ? 1 : 0 }} 
+      transition={{ duration: 2 }}
     >
       <div className="hero-overlay">
-        <h1 className="hero-title">Innovating for a Sustainable Future</h1>
+        
         <p className="hero-subtitle">
           Explore our solutions for a better tomorrow.
         </p>
@@ -41,6 +47,12 @@ const Hero = () => {
           Explore Now
         </button>
       </div>
+      <img
+        src={images[currentImageIndex]}
+        alt="Background"
+        className="hidden-background-image"
+        onLoad={handleImageLoad}
+      />
     </motion.div>
   );
 };
