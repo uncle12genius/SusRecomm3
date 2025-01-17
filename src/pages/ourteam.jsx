@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./../styles/ourteam.css";
 
@@ -21,24 +22,25 @@ const OurTeam = () => {
   const people = [
     {
       name: "James Ayako",
-      title: "Co-founder & CEO ",
+      title: "Co-founder & CEO",
       image: "jim.png",
     },
     {
       name: "Charles Nyamwaro",
-      title: "Chief Business Development office ",
-      image: "chuck.png ",
+      title: "Chief Business Development Officer",
+      image: "chuck.png",
     },
     {
-      name: "Florence Njoki ",
-      title: "Chief Operation Office ",
-      image: "evan.png ",
+      name: "Florence Njoki",
+      title: "Chief Operation Officer",
+      image: "njoki.jpg",
     },
   ];
 
   return (
     <div id="our-team" className="our-team-section">
-      <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+      <h4 className="our-team-title">Our Team</h4>
+      <div className="team-container">
         {people.map((person, index) => (
           <FlipCard key={index} person={person} />
         ))}
