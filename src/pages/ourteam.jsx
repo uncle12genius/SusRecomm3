@@ -28,7 +28,7 @@ const OurTeam = () => {
     {
       name: "Charles Nyamwaro",
       title: "Chief Business Development Officer",
-      image: "chuck.png",
+      image: "chuck.jpg",
     },
     {
       name: "Florence Njoki",
