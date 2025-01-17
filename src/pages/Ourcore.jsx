@@ -1,8 +1,8 @@
 import React from "react";
 import { useInView } from "react-intersection-observer"; 
-import "./../styles/About.css";
+import "./../styles/Ourcore.css";
 
-const About = () => {
+const Ourcore = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -10,16 +10,24 @@ const About = () => {
 
   const cards = [
     {
-      title: "About",
-      content: "Empowering communities with sustainable infrastructural solutions for a prosperous future.",
+      title: "Partnership",
+      content: "We foster enduring collaborations with clients, experts, and communities to achieve impactful results.",
     },
     {
-      title: "Our Vision",
-      content: "Africa's hub of sustainable infrastructural solutions.",
+      title: "Results",
+      content: "Delivering measurable impacts aligned with our mission of creating sustainable futures",
     },
     {
-      title: "Our Mission",
-      content: "To design, recommend, and implement sustainable infrastructural solutions for individuals, households, and communities across Africa.",
+      title: "Integrity",
+      content: "Upholding transparency and accountability in all our endeavors.",
+    },
+    {
+      title: "Trust",
+      content: "Building and maintaining trust as the foundation of our relationships and operations",
+    },
+    {
+      title: "Efficiency",
+      content: "Combining creativity and practicality to deliver economic and effective solutions.",
     },
   ];
 
@@ -29,6 +37,7 @@ const About = () => {
       className={`about-section ${inView ? "visible" : ""}`} 
       ref={ref}
     >
+      <h4 className="core-title">Our Core Values</h4> 
       <div className={`flip-card-container ${inView ? "animate" : ""}`}>
         {cards.map((card, index) => (
           <div className="flip-card" key={index}>
@@ -47,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Ourcore;

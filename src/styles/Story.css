@@ -1,0 +1,10 @@
+/* Styles for the entire story section */
+.our-story section{
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
