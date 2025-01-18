@@ -1,17 +1,17 @@
-/* General container for the story section */
+
 .story-section {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #004d40, #009688);
+  background:white  ;
   padding: 20px;
   color: #fff;
 }
 
-/* Individual card styling */
+
 .story-card {
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.7); 
   border-radius: 15px;
   padding: 30px;
   max-width: 800px;
@@ -19,20 +19,20 @@
   text-align: left;
 }
 
-/* Title styling */
+
 .story-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #00e676; /* Vibrant green for the title */
+  color:#000072; 
 }
 
-/* Content styling */
+
 .story-content {
   line-height: 1.6;
   font-size: 1rem;
 }
 
-/* Mobile responsiveness */
+
 @media (max-width: 600px) {
   .story-title {
     font-size: 2rem;
