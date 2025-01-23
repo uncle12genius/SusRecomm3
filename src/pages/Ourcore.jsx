@@ -37,7 +37,7 @@ const Ourcore = () => {
       className={`about-section ${inView ? "visible" : ""}`} 
       ref={ref}
     >
-      <h4 className="core-title">Our Core Values</h4> 
+
       <div className={`flip-card-container ${inView ? "animate" : ""}`}>
         {cards.map((card, index) => (
           <div className="flip-card" key={index}>
