@@ -2,78 +2,78 @@
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.6s ease-in-out;
-}
-
-.about-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.core-title {
-  text-align: center;
-  font-size: 2rem; 
-  font-weight: bold;
-  margin-bottom: 20px; 
-  color: #000072; 
-}
-
-.flip-card-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 50px;
-    padding: 20px;
-    gap: 50px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.flip-card-container.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.flip-card {
-    background-color: transparent;
-    width: 200px;
-    height: 250px;
-    perspective: 1000px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
     text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+  }
+  
+  .about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .core-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000072;
+    text-align: center;
+  }
+  
+  .scrolling-card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    margin: 0 auto;
+  }
+  
+  .scrolling-card {
+    background-color: navy;
+    width: 250px;
+    height: 250px;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 1.2rem;
     padding: 20px;
-}
-
-.flip-card-front {
-    background-color: navy;
-}
-
-.flip-card-back {
-    background-color: #0047ab;
-    transform: rotateY(180deg);
-}
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .scrolling-card-inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .scrolling-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .scrolling-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .scrolling-card p {
+    font-size: 1rem;
+    display: none;
+    margin-top: 10px;
+  }
+  
+  .scrolling-card:hover p {
+    display: block;
+  }
+  
