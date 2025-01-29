@@ -1,6 +1,7 @@
-import React from "react";
-import { useInView } from "react-intersection-observer"; 
+import React, { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import "./../styles/About.css";
+import { FaBullseye, FaLightbulb, FaBalanceScale } from "react-icons/fa";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -8,38 +9,50 @@ const About = () => {
     threshold: 0.1,
   });
 
+  const colors = {
+    mission: "#007ACC",
+    vision: "#005F8A",
+    values: "#6B8E23",
+  };
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   const cards = [
     {
-      title: "About",
-      content: "Empowering communities with sustainable infrastructural solutions for a prosperous future.",
+      title: "OUR MISSION",
+      content:
+        "To design, recommend, and implement sustainable infrastructural solutions for individuals, households, and communities across Africa.",
+      icon: <FaBullseye className="icon" />, 
+      color: colors.mission,
     },
     {
-      title: "Our Vision",
+      title: "OUR VISION",
       content: "Africa's hub of sustainable infrastructural solutions.",
+      icon: <FaLightbulb className="icon" />, 
+      color: colors.vision,
     },
     {
-      title: "Our Mission",
-      content: "To design, recommend, and implement sustainable infrastructural solutions for individuals, households, and communities across Africa.",
+      title: "OUR VALUES",
+      content: "Integrity, innovation, and sustainability in all our projects.",
+      icon: <FaBalanceScale className="icon" />, 
+      color: colors.values,
     },
   ];
 
   return (
-    <div
-      id="about"
-      className={`about-section ${inView ? "visible" : ""}`} 
-      ref={ref}
-    >
-      <div className={`flip-card-container ${inView ? "animate" : ""}`}>
+    <div id="about" className={`about-section ${inView ? "visible" : ""}`} ref={ref}>
+      <div className="cards-container">
         {cards.map((card, index) => (
-          <div className="flip-card" key={index}>
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <h2>{card.title}</h2>
-              </div>
-              <div className="flip-card-back">
-                <p>{card.content}</p>
-              </div>
-            </div>
+          <div 
+            className={`card ${hoveredIndex === index ? "hovered" : ""}`} 
+            key={index} 
+            style={{ backgroundColor: card.color, transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)", transition: "transform 0.3s ease-in-out" }}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <div className="icon-container">{card.icon}</div>
+            <h3 className="card-title">{card.title}</h3>
+            <p className="card-content">{card.content}</p>
           </div>
         ))}
       </div>
