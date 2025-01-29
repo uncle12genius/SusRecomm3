@@ -37,7 +37,7 @@ const Hero = () => {
           to="about" 
           smooth={true}
           duration={800}
-          offset={-70} 
+          offset={-window.innerHeight / 4} 
           className="hero-button"
         >
           Explore Now
