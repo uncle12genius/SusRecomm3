@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import "./../styles/About.css";
 import { FaBullseye, FaLightbulb } from "react-icons/fa";
 
-const AboutOurcore = () => {
+const About = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -16,63 +16,39 @@ const AboutOurcore = () => {
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const aboutCards = [
+  const cards = [
     {
       title: "OUR MISSION",
       content:
         "To design, recommend, and implement sustainable infrastructural solutions for individuals, households, and communities across Africa.",
-      icon: <FaBullseye className="icon" />,
+      icon: <FaBullseye className="icon" />, 
       color: colors.mission,
     },
     {
       title: "OUR VISION",
       content: "Africa's hub of sustainable infrastructural solutions.",
-      icon: <FaLightbulb className="icon" />,
+      icon: <FaLightbulb className="icon" />, 
       color: colors.vision,
     },
   ];
 
   const coreValues = [
-    {
-      title: "Partnership",
-      content: "We foster enduring collaborations with clients, experts, and communities to achieve impactful results.",
-      icon: "🤝",
-    },
-    {
-      title: "Results",
-      content: "Delivering measurable impacts aligned with our mission of creating sustainable futures.",
-      icon: "📊",
-    },
-    {
-      title: "Integrity",
-      content: "Upholding transparency and accountability in all our endeavors.",
-      icon: "🔍",
-    },
-    {
-      title: "Trust",
-      content: "Building and maintaining trust as the foundation of our relationships and operations.",
-      icon: "🛡️",
-    },
-    {
-      title: "Efficiency",
-      content: "Combining creativity and practicality to deliver economic and effective solutions.",
-      icon: "⚡",
-    },
+    { title: "Partnership", content: "We foster collaborations for impactful results.", icon: "🤝" },
+    { title: "Results", content: "Delivering measurable impacts for sustainable futures.", icon: "📊" },
+    { title: "Integrity", content: "Upholding transparency and accountability.", icon: "🔍" },
+    { title: "Trust", content: "Building trust as the foundation of our operations.", icon: "🛡️" },
+    { title: "Efficiency", content: "Delivering economic and effective solutions.", icon: "⚡" },
   ];
 
   return (
-    <div id="about" className={`about-section ${inView ? "visible" : ""}`} ref={ref}>
-      {/* About Section */}
-      <div className="cards-container">
-        {aboutCards.map((card, index) => (
-          <div
-            className={`card ${hoveredIndex === index ? "hovered" : ""}`}
-            key={index}
-            style={{
-              backgroundColor: card.color,
-              transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
-              transition: "transform 0.3s ease-in-out",
-            }}
+    <div className="about-section" ref={ref}>
+      {/* Mission & Vision Cards */}
+      <div className={`cards-container ${inView ? "visible" : ""}`}>
+        {cards.map((card, index) => (
+          <div 
+            className="card" 
+            key={index} 
+            style={{ backgroundColor: card.color }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -83,20 +59,23 @@ const AboutOurcore = () => {
         ))}
       </div>
 
-      {/* Core Values Section */}
-      <div className={`scrolling-card-container ${inView ? "animate" : ""}`}>
-        {coreValues.map((card, index) => (
-          <div className="scrolling-card" key={index}>
-            <div className="scrolling-card-inner">
-              <div className="card-icon">{card.icon}</div>
-              <h3>{card.title}</h3>
-              <p>{card.content}</p>
+      {/* Core Values Section (Placed Below Mission & Vision Cards) */}
+      <div className="core-values-section">
+        <h2 className="core-title">Our Core Values</h2>
+        <div className="scrolling-card-container">
+          {coreValues.map((value, index) => (
+            <div className="scrolling-card" key={index}>
+              <div className="scrolling-card-inner">
+                <div className="card-icon">{value.icon}</div>
+                <h3>{value.title}</h3>
+                <p>{value.content}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default AboutOurcore;
+export default About;
