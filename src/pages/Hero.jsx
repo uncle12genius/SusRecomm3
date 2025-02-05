@@ -23,6 +23,7 @@ const Hero = () => {
 
   return (
     <motion.div
+       id="home"
       className="hero-container"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       initial={{ opacity: 0 }}
@@ -31,16 +32,18 @@ const Hero = () => {
     >
       <div className="hero-overlay">
         <p className="hero-subtitle">
-          Explore our solutions for a better tomorrow.
+         solutions for a better tomorrow.
         </p>
         <ScrollLink
-          to="about" 
-          smooth={true}
-          duration={800}
-          offset={-window.innerHeight / 8} 
-          className="hero-button"
-        >
-          Explore Now
+        
+         to="about" 
+         smooth={true}
+         duration={800}
+         offset={-70} 
+         className="hero-button"
+       >
+         More About Us 
+       
         </ScrollLink>
       </div>
       <img

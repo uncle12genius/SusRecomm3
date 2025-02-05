@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import "./../styles/About.css";
+import "./../styles/About.css"; // Ensure this path is correct
 import { FaBullseye, FaLightbulb } from "react-icons/fa";
 
 const About = () => {
@@ -21,13 +21,13 @@ const About = () => {
       title: "OUR MISSION",
       content:
         "To design, recommend, and implement sustainable infrastructural solutions for individuals, households, and communities across Africa.",
-      icon: <FaBullseye className="icon" />, 
+      icon: <FaBullseye className="icon" />,
       color: colors.mission,
     },
     {
       title: "OUR VISION",
       content: "Africa's hub of sustainable infrastructural solutions.",
-      icon: <FaLightbulb className="icon" />, 
+      icon: <FaLightbulb className="icon" />,
       color: colors.vision,
     },
   ];
@@ -41,13 +41,13 @@ const About = () => {
   ];
 
   return (
-    <div className="about-section" ref={ref}>
+    <div className={`about-section ${inView ? "visible" : ""}`} id="about" ref={ref}>
       {/* Mission & Vision Cards */}
-      <div className={`cards-container ${inView ? "visible" : ""}`}>
+      <div className="cards-container">
         {cards.map((card, index) => (
-          <div 
-            className="card" 
-            key={index} 
+          <div
+            className="card"
+            key={index}
             style={{ backgroundColor: card.color }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -59,7 +59,7 @@ const About = () => {
         ))}
       </div>
 
-      {/* Core Values Section (Placed Below Mission & Vision Cards) */}
+      {/* Core Values Section */}
       <div className="core-values-section">
         <h2 className="core-title">Our Core Values</h2>
         <div className="scrolling-card-container">
