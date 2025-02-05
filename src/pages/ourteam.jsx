@@ -39,7 +39,7 @@ const OurTeam = () => {
 
   return (
     <div id="our-team" className="our-team-section">
-      <h4 className="our-team-title">Our Team</h4>
+      <h4 className="our-team-title">Leadership Team </h4>
       <div className="team-container">
         {people.map((person, index) => (
           <FlipCard key={index} person={person} />
