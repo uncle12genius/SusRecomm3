@@ -1,25 +1,23 @@
-import React from "react";
+import React from "react"; 
 import "./../styles/Footer.css";
-import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="social-icons">
-        <div className="icon facebook">
+        <a href="https://www.facebook.com/JaGedoBuilders" target="https://www.facebook.com/JaGedoBuilders" rel="noopener noreferrer" className="icon facebook">
           <FaFacebookF />
-        </div>
+        </a>
 
-        <div className="icon instagram">
+        <a href="https://www.instagram.com/susrecomm/" target="https://www.instagram.com/susrecomm/" rel="noopener noreferrer" className="icon instagram">
           <FaInstagram />
-        </div>
-        
-        <div className="icon linkedin">
+        </a>
+
+        <a href="https://www.linkedin.com/company/88956859/admin/dashboard/" target="https://www.linkedin.com/company/88956859/admin/dashboard/" rel="noopener noreferrer" className="icon linkedin">
           <FaLinkedinIn />
-        </div>
+        </a>
       </div>
-      
     </footer>
   );
 };
