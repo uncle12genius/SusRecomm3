@@ -5,8 +5,8 @@ import Hero from "./pages/Hero.jsx";
 import About from "./pages/About.jsx";
 import Story from "./pages/Story.jsx";
 import OurTeam from "./pages/OurTeam.jsx";
-import Ourcore from "./pages/Ourcore.jsx";
-import Footer from "./components/Footer.jsx";
+// import Ourcore from "./pages/Ourcore.jsx";
+import Footer from "./components/footer.jsx";
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
               <About />
               <Story />
               <OurTeam />
-              <Ourcore />
+              {/* <Ourcore /> */}
               <Footer />
             </>
           }
