@@ -1,19 +1,12 @@
-
 import React from "react";
 import "./../styles/ourteam.css";
 
-const FlipCard = ({ person }) => {
+const ProfileCard = ({ person }) => {
   return (
     <div className="profile-card">
-      <div className="profile-card-inner">
-        <div className="profile-card-front">
-          <img src={person.image} alt={`${person.name}`} />
-        </div>
-        <div className="profile-card-back">
-          <h3>{person.name}</h3>
-          <p>{person.title}</p>
-        </div>
-      </div>
+      <img src={person.image} alt={`${person.name}`} className="profile-image" />
+      <h3 className="profile-name">{person.name}</h3>
+      <p className="profile-title">{person.title}</p>
     </div>
   );
 };
@@ -39,10 +32,10 @@ const OurTeam = () => {
 
   return (
     <div id="our-team" className="our-team-section">
-      <h4 className="our-team-title">Our Team</h4>
+      <h4 className="our-team-title">Leadership Team</h4>
       <div className="team-container">
         {people.map((person, index) => (
-          <FlipCard key={index} person={person} />
+          <ProfileCard key={index} person={person} />
         ))}
       </div>
     </div>
