@@ -65,10 +65,6 @@
 .nav-links li {
   display: inline-block;
   margin: 0 1rem;
-<<<<<<< HEAD
-=======
-  font-weight: bold;
->>>>>>> genius
 }
 
 .nav-links a {
@@ -88,7 +84,6 @@
   .nav-links {
     display: flex;
   }
-<<<<<<< HEAD
 }
 
 /* Small devices (landscape phones, 767px and below) */
@@ -134,6 +129,4 @@
   .company-name h3 {
     font-size: 0.9rem;
   }
-=======
->>>>>>> genius
 }
