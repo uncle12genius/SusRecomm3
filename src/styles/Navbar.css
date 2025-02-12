@@ -5,53 +5,112 @@
   width: 100%;
   background-color: white;
   z-index: 50;
-  line-height: normal; 
-  display: flex;
-  justify-content: space-between;
-}
-
-.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem ; 
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+.logo-container {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .logo-image {
-  height: 40px; 
+  height: 40px;
   width: auto;
   object-fit: contain;
+  transition: height 0.3s ease;
+}
+
+.company-name h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #000072;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: font-size 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
   display: none;
-  margin-left: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
   display: inline-block;
-  margin: 0 1rem; 
-  font-weight: bold;
+  margin: 0 1rem;
 }
 
 .nav-links a {
   text-decoration: none;
   color: black;
-  font-size: 1rem; 
+  font-size: 1rem;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
 .nav-links a:hover {
   color: #000072;
 }
 
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
+  }
+}
+
+/* Small devices (landscape phones, 767px and below) */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .logo-container {
+    gap: 0.75rem;
+  }
+
+  .logo-image {
+    height: 35px;
+  }
+
+  .company-name h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra small devices (phones, 480px and below) */
+@media (max-width: 480px) {
+  .logo-image {
+    height: 30px;
+  }
+
+  .company-name h3 {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Very small devices (phones, 360px and below) */
+@media (max-width: 360px) {
+  .logo-container {
+    gap: 0.5rem;
+  }
+
+  .company-name h3 {
+    font-size: 0.9rem;
   }
 }
