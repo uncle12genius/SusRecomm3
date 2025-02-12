@@ -9,7 +9,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
+<<<<<<< HEAD
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+=======
+>>>>>>> genius
 }
 
 .logo-container {
@@ -39,6 +42,19 @@
   align-items: center;
 }
 
+.company-name h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #000072;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links {
   display: none;
   list-style: none;
@@ -49,6 +65,10 @@
 .nav-links li {
   display: inline-block;
   margin: 0 1rem;
+<<<<<<< HEAD
+=======
+  font-weight: bold;
+>>>>>>> genius
 }
 
 .nav-links a {
@@ -68,6 +88,7 @@
   .nav-links {
     display: flex;
   }
+<<<<<<< HEAD
 }
 
 /* Small devices (landscape phones, 767px and below) */
@@ -113,4 +134,6 @@
   .company-name h3 {
     font-size: 0.9rem;
   }
+=======
+>>>>>>> genius
 }
