@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 150vh;
   background:white  ;
   padding: 20px;
   color: #fff;
@@ -13,9 +13,10 @@
 .story-card {
   background: rgba(0, 0, 141, 1); 
   border-radius: 15px;
-  padding: 30px;
+  padding: 100px;
   max-width: 800px;
-  box-shadow: 0 10px 30px rgba(0, 0, 141, 0.7);
+  
+  box-shadow: 0 10px 30px rgba(0, 0, 114, 1);
   text-align: left;
 }
 
