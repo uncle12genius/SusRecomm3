@@ -33,11 +33,11 @@ const About = () => {
   ];
 
   const coreValues = [
-    { title: "Partnership", content: "We foster collaborations for impactful results.", icon: "🤝" },
-    { title: "Results", content: "Delivering measurable impacts for sustainable futures.", icon: "📊" },
-    { title: "Integrity", content: "Upholding transparency and accountability.", icon: "🔍" },
-    { title: "Trust", content: "Building trust as the foundation of our operations.", icon: "🛡️" },
-    { title: "Efficiency", content: "Delivering economic and effective solutions.", icon: "⚡" },
+    { title: "Partnership", content: "We foster collaborations for impactful results." },
+    { title: "Results", content: "Delivering measurable impacts for sustainable futures." },
+    { title: "Integrity", content: "Upholding transparency and accountability." },
+    { title: "Trust", content: "Building trust as the foundation of our operations."},
+    { title: "Efficiency", content: "Delivering economic and effective solutions.",  },
   ];
 
   return (
